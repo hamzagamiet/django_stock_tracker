@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2><strong>Log in</strong></h2>
+    <hr>
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="userUsername" class="col-form-label"></label><strong>Username:</strong></label>
+            <input type="text" class="form-control" id="usernameLogin" placeholder="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="userPassword" class="col-form-label"><strong>Password:</strong></label>
+            <input type="password" class="form-control" id="passwordLogIn"placeholder="password" name="password" required>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Log In</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

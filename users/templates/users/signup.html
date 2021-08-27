@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div class="container">
+    <h2><strong>Sign Up</strong></h2>
+    <hr>
+    <form class="form auth__form" action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+
+        {{ form|crispy }}
+
+        <div class="modal-footer">
+            <button type="submit" value = "Register User" class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container">
+    <h2><strong>{{request.user.username}}'s Watchlist</strong></h2>
+    <hr>
+
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Ticker</th>
+            <th scope="col">Open</th>
+            <th scope="col">Close</th>
+            <th scope="col">High</th>
+            <th scope="col">Low</th>
+            <th scope="col">24-Hour</th>
+            <th scope="col">7-Day</th>
+            <th scope="col">Volume</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for stock in stock_list %}
+          <tr>
+            <th scope="row">{{stock.rank}}</th>
+            <td><a href="{% url 'stock' stock.ticker %}">{{stock.stock_name_short}}</a></td>
+            <td>{{stock.ticker}}</td>
+            <td>£{{stock.open}}</td>
+            <td>£{{stock.close}}</td>
+            <td>£{{stock.high}}</td>
+            <td>£{{stock.low}}</td>
+            <td>{{stock.daily_change}}%</td>
+            <td>{{stock.weekly_change}}%</td>
+            <td>{{stock.volume}}</td>
+            
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "chart.js": "^3.5.0",
+    "jslint": "^0.12.1"
+  }
+}
