@@ -233,9 +233,9 @@ def search_results(request):
                     {
                         "symbol": nasdaq_symbols.loc[x]["Symbol"],
                         "stock_name_long": nasdaq_symbols.loc[x]["Security Name"],
-                        "stock_name_short": (stock_name_long[:40] + "...")
-                        if len(stock_name_long) > 40
-                        else stock_name_long,
+                        "stock_name_short": (
+                            nasdaq_symbols.loc[x]["Security Name"][:40] + "..."
+                        ),
                     }
                 )
 
