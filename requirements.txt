@@ -100,6 +100,7 @@ urllib3==1.26.6
 virtualenv==20.7.0
 w3lib==1.22.0
 websockets==8.1
+whitenoise
 yahoo-fin==0.8.9.1
 yahoo-finance==1.4.0
 yarl==1.6.3
