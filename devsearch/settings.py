@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-!3^g++splvbbv(5pn1gtyyczno*3r&5j3-j)g^*98v8hfn11cy"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1", "stock-tracker-hamza.herokuapp.com"]
 
